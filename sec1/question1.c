@@ -18,20 +18,15 @@ int main()
         other_num = the_num * 2;
     }
 
-    char *the_string = "I love CS300!";
+    char* the_string = "This is the first CS 300 section.";
     char fav_char = '!';
-    dereference_and_set(&fav_char, '?');
+    dereference_and_set(&fav_char, '.');
 
-    char *smaller_string = "";
-    size_t string_end = strlen(the_string);
-
-    for (size_t i = 0; i <= string_end; i++)
-    {
-        smaller_string = the_string + i;
-        printf("%s\n", smaller_string);
+    for (int i = 0; i < 7; i++) {
+        the_string = strchr(the_string + 1, ' ');
     }
 
-    dereference_and_set(smaller_string, '!');
+    dereference_and_set(the_string, '!');
 
     return 0;
 }
