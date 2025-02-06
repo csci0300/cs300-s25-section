@@ -109,8 +109,8 @@ void update_board(struct TTTCell* board, enum TTTSymbol curr_player, int dims) {
   }
 
   // Update the board
-  board[(move_col * dims) + move_col].is_filled = 1;
-  board[(move_col * dims) + move_col].symbol = curr_player;
+  board[(move_col * dims) + move_row].is_filled = 1;
+  board[(move_col * dims) + move_row].symbol = curr_player;
 }
 
 /* Function main
