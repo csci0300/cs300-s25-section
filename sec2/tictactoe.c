@@ -58,7 +58,9 @@ struct TTTCell* initialize_board(int* dims) {
 
     // Extract dimensions for board
     char buffer[BUFSIZE];
-    buffer[read(STDIN_FILENO, buffer, BUFSIZE - 1)] = '\0';
+    int bytes_read = read(STDIN_FILENO, buffer, BUFSIZE - 1); // Read input from terminal
+    buffer[bytes_read] = '\0';
+
     dims = atoi(buffer);
 
     // Error check for nonexistant board dimensions
